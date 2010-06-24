@@ -2,14 +2,14 @@
  * Theme Name: Structure
  * Theme URI: http://themehybrid.com/themes/structure
  * Description: A beautifully-crafted blogging theme that is <em>structurally</em> sound in both markup and design, making it a powerful enough tool for any blogger.
- * Version: 2.0
+ * Version: 2.1
  * Author: Justin Tadlock
  * Author URI: http://justintadlock.com
  * Tags: threaded-comments, microformats, translation-ready, rtl-language-support, two-columns, fixed-width
  * Template: hybrid
  * Status: publish
  *
- * Copyright (c) 2007 - 2009 Justin Tadlock.  All rights reserved.
+ * Copyright (c) 2007 - 2010 Justin Tadlock.  All rights reserved.
  * http://justintadlock.com
  *
  * Structure is released under the GNU General Public License, version 2 (GPL).
@@ -282,64 +282,63 @@ acronym {
 /**
 * Page Navigation
 ************************************************/
-#navigation {
+#primary-menu {
 	position: relative;
-	top: -102px;
 	width: 980px;
 	height: 40px;
-	margin: 0 auto;
+	margin: -142px auto 102px auto;
 	background: #01203C;
 	}
-#page-nav {
+#primary-menu div.menu {
 	float: left;
 	width: 700px;
 	margin: 0;
 	}
-#page-nav ul {
+#primary-menu ul {
 	list-style: none;
 	margin: 0;
 	}
-#page-nav li {
+#primary-menu li {
 	float: left;
 	margin: 0;
 	padding: 0;
 	}
-#page-nav a {
+#primary-menu a {
 	display: block;
 	font: normal normal bold 14px/14px Arial, Verdana, sans-serif;
 	color: #fff;
 	padding: 13px 20px 13px 20px;
 	}
-#page-nav a:hover {
+#primary-menu a:hover {
 	text-decoration: underline;
 	}
 
 /* Drop-down styles */
-#page-nav li:hover ul, #page-nav li.sfHover ul  {
+#primary-menu li:hover ul, #primary-menu li.sfHover ul  {
 	top: 40px;
 	}
-#page-nav li li:hover ul, #page-nav li li.sfHover ul, #page-nav li li li:hover ul, #page-nav li li li.sfHover ul  {
+#primary-menu li li:hover ul, #primary-menu li li.sfHover ul, #primary-menu li li li:hover ul, #primary-menu li li li.sfHover ul  {
 	top: -1px;
 	}
-#page-nav ul ul {
+#primary-menu ul ul {
 	border-top: 1px solid #01192f;
 	background: #01203C;
 	}
-#page-nav li li {
+#primary-menu li li {
 	margin: 0;
 	padding: 0;
 	border-bottom: 1px solid #01192f;
 	}
-#page-nav li li a {
+#primary-menu li li a {
 	padding: 10px 10px;
 	border: none;
 	}
 
 /* Search form in navigation bar. */
-#navigation form {
+#primary-menu form {
 	float: right;
 	}
-#navigation .search-text {
+#primary-menu input[type="text"] {
 	width: 200px;
 	padding: 5px 10px;
 	margin: 5px 0;
@@ -348,7 +347,7 @@ acronym {
 	background: #f7f7f7;
 	border: 1px solid #333;
 	}
-#navigation .search-submit {
+#primary-menu input[type="submit"] {
 	display: none;
 	}
 
@@ -358,8 +357,9 @@ acronym {
 #header {
 	overflow: hidden;
 	position: relative;
-	top: 40px;
 	height: 60px;
+	top: 40px;
+	margin-bottom: 40px;
 	padding: 20px 20px;
 	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
@@ -428,7 +428,7 @@ acronym {
 	font-weight: bold;
 	margin: 0 0 10px 0;
 	}
-.page-title, .singular-page-title {
+.page-title {
 	margin: 0 0 20px 0;
 	}
 
@@ -464,7 +464,7 @@ acronym {
 	color: #333;
 	}
 
-.author-info, .category-info, .date-info, .tag-info, .search-info, .taxonomy-info {
+.author-info, .search-info {
 	overflow: hidden;
 	margin: 0 0 20px 0;
 	padding: 20px 20px 0 20px;
@@ -473,10 +473,10 @@ acronym {
 	}
 
 /* Page links <!--nextpage--> */
-p.pages {
+.page-links {
 	font-style: italic;
 	}
-p.pages a {
+.page-links a {
 	margin: 0 2px;
 	padding: 4px 12px;
 	color: #eee !important;
@@ -613,7 +613,7 @@ p.pages a {
 	}
 
 /* Comment meta */
-#comments .comment-meta-data {
+#comments .comment-meta {
 	margin: 5px 0 20px 0;
 	font-style: italic;
 	color: #666;
@@ -657,7 +657,7 @@ textarea {
 	margin: 0 0 20px 0;
 	border: 1px solid #ddd;
 	}
-.button {
+.button, #submit {
 	width: 100px;
 	padding: 7px;
 	margin-right: 10px;
@@ -666,7 +666,7 @@ textarea {
 	border: 1px double #333;
 	background: #01203C;
 	}
-.button:hover {
+.button:hover, #submit:hover {
 	cursor: pointer;
 	background: #00162A;
 	}

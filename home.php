@@ -1,6 +1,16 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Home Template
+ *
+ * This template is loaded when on the home/blog page.
+ *
+ * @package Structure
+ * @subpackage Template
+ */
 
-	<div class="hfeed content">
+get_header(); ?>
+
+	<div id="content" class="hfeed content">
 
 		<?php hybrid_before_content(); // Before content hook ?>
 
@@ -8,7 +18,7 @@
 
 			<div class="<?php hybrid_entry_class(); ?>">
 
-				<?php get_the_image( array( 'custom_key' => array( 'Thumbnail' ), 'default_size' => 'thumbnail' ) ); ?>
+				<?php get_the_image( array( 'custom_key' => array( 'Thumbnail' ), 'size' => 'thumbnail' ) ); ?>
 
 				<?php hybrid_before_entry(); ?>
 
@@ -24,6 +34,6 @@
 
 		<?php hybrid_after_content(); // After content hook ?>
 
-	</div>
+	</div><!-- .content .hfeed -->
 
 <?php get_footer(); ?>

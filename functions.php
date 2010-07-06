@@ -9,7 +9,7 @@
 /********************************************************/
 
 /* Localization. */
-load_child_theme_textdomain( 'structure', get_stylesheet_directory() );
+load_child_theme_textdomain( 'structure', get_stylesheet_directory() . '/languages' );
 
 /* Actions. */
 add_action( 'hybrid_after_primary_menu', 'get_search_form' );
